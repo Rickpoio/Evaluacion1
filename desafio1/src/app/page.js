@@ -61,6 +61,11 @@ export default function Home() {
     }
     setResultado(`Raíz cuadrada de Número 1: ${Math.sqrt(n1)}`);
   };
+   const pot = () => {
+    const { n1, n2 } = parseInputs();
+    if (mostrarErrorSiNaN(n1, n2)) return;
+    setResultado(`Resultado de la potencia: ${Math.pow(n1 , n2)}`);
+  };
 
   const Borrar = () => {
     setNumero1('');
@@ -97,6 +102,7 @@ export default function Home() {
           <button className={styles.button} onClick={multi}>*</button>
           <button className={styles.button} onClick={dividir}>/</button>
           <button className={styles.button} onClick={raiz}>Sqrt</button>
+          <button className={styles.button} onClick={pot}>pot</button>
           <button className={styles.button} onClick={Borrar}>AC</button>
         </div>
         
