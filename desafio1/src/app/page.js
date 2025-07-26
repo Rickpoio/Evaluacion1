@@ -70,6 +70,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
+          <label className={styles.titulo}>Calculadora Desafio 1</label>
       <div className={styles.calculadora}>
         <div className={styles.numeros}>
           <label className={styles.text}>Número 1:</label>
@@ -89,16 +90,16 @@ export default function Home() {
             onChange={(e) => setNumero2(e.target.value)}
           />
         </div>
-        <div>
-          <button className={styles.button} onClick={sumar}>Sumar</button>
-          <button className={styles.button} onClick={restar}>Restar</button>
+        <div className={styles.botones}>
+          <button className={styles.button} onClick={sumar}>+</button>
+          <button className={styles.button} onClick={restar}>-</button>
+      
+          <button className={styles.button} onClick={multi}>*</button>
+          <button className={styles.button} onClick={dividir}>/</button>
+          <button className={styles.button} onClick={raiz}>Sqrt</button>
+          <button className={styles.button} onClick={Borrar}>AC</button>
         </div>
-        <div>
-          <button className={styles.button} onClick={multi}>Multiplicar</button>
-          <button className={styles.button} onClick={dividir}>Dividir</button>
-          <button className={styles.button} onClick={raiz}>Raíz Cuadrada</button>
-        </div>
-        <button className={styles.button} onClick={Borrar}>AC</button>
+        
 
         {resultado && (
           <div className={styles.resultado}>{resultado}</div>
