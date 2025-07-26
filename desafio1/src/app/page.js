@@ -15,15 +15,19 @@ export default function Home() {
  };
  const multi = () => {
  const resultadoMulti = parseFloat(numero1) * parseFloat(numero2);
- setResultado(`Resultado de la resta: ${resultadoMulti}`);
+ setResultado(`Resultado de la multiplicacion: ${resultadoMulti}`);
  };
  const raiz = () => {
  const resultadoRaiz = Math.sqrt(parseFloat(numero1)) ;
- setResultado(`Resultado de la resta: ${resultadoRaiz}`);
+ setResultado(`Resultado de la raiz: ${resultadoRaiz}`);
  };
  const dividir = () => {
  const resultadoDividir = parseFloat(numero1) / parseFloat(numero2);
- setResultado(`Resultado de la resta: ${resultadoDividir}`);
+ setResultado(`Resultado de la division: ${resultadoDividir}`);
+ };
+  const potencia = () => {
+ const resultadopotencia = Math.pow(parseFloat(numero1) , parseFloat(numero2));
+ setResultado(`Resultado de la potencia: ${resultadopotencia}`);
  };
 
  return (
@@ -44,9 +48,16 @@ value={numero2} onChange={(e) => setNumero2(e.target.value)} />
 onClick={sumar}>Sumar</button>
  <button className={styles.button}
 onClick={restar}>Restar</button>
- </div>
- <button className={styles.button}
+<button className={styles.button}
 onClick={multi}>Multiplicar</button>
+<button className={styles.button}
+onClick={dividir}>dividir</button>
+<button className={styles.button}
+onClick={raiz}>raiz cuadrada</button>
+<button className={styles.button}
+onClick={potencia}>potencia</button>
+ </div>
+ 
  
  {resultado && <div
 className={styles.resultado}>{resultado}</div>}
