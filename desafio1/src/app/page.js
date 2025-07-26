@@ -22,6 +22,7 @@ export default function Home() {
  setResultado(`Resultado de la raiz: ${resultadoRaiz}`);
  };
  const dividir = () => {
+    
  const resultadoDividir = parseFloat(numero1) / parseFloat(numero2);
  setResultado(`Resultado de la division: ${resultadoDividir}`);
  };
@@ -33,6 +34,7 @@ export default function Home() {
  return (
  <main className={styles.main}>
  <div className={styles.calculadora}>
+     <label className={styles.text}>Ingrese los números a operar:</label>
  <div className={styles.numeros}>
  <label className={styles.text}>Número 1:</label>
  <input className={styles.inputnum} type="number"
@@ -62,6 +64,7 @@ onClick={potencia}>potencia</button>
  {resultado && <div
 className={styles.resultado}>{resultado}</div>}
  </div>
+ <label className={styles.foot} >Hecho Por: HM220373 // EU220488</label>
  </main>
  );
 }
