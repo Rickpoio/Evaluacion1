@@ -104,6 +104,8 @@ export default function Home() {
           <div className={styles.resultado}>{resultado}</div>
         )}
       </div>
+      <label className={styles.foot}>HECHO POR: HM220373 // EU220488</label>
+      
     </main>
   );
 }
